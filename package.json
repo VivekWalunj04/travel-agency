@@ -1,0 +1,16 @@
+{
+  "name": "travel-agency",
+  "version": "1.0.0",
+  "description": "Wanderlust Travel Agency — MERN Stack",
+  "scripts": {
+    "server":   "cd server && npm run dev",
+    "client":   "cd client && npm start",
+    "dev":      "concurrently \"npm run server\" \"npm run client\"",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+    "seed":     "cd server && node seed.js",
+    "build":    "cd client && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
