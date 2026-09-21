@@ -33,6 +33,14 @@ app.get('/api/health', (req, res) => {
   });
 });
 
+// ─── Root Route ───────────────────────────────────────────────────────────────
+app.get('/', (req, res) => {
+  res.json({
+    status: 'OK',
+    message: 'Travel Agency API is running on Vercel'
+  });
+});
+
 // ─── 404 Handler ──────────────────────────────────────────────────────────────
 app.use((req, res) => {
   res.status(404).json({
@@ -65,4 +73,5 @@ if (require.main === module) {
   });
 }
 
+// Export app for Vercel
 module.exports = app;
